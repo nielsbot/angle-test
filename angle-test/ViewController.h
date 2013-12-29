@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class AngleView ;
 @class HandleView ;
 
 @interface ViewController : UIViewController

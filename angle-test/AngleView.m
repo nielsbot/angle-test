@@ -22,9 +22,11 @@ CGRect CGRectMakeWithAnglePoints( struct AnglePoints p )
 	return (CGRect){ { minX, minY }, { maxX - minX, maxY - minY } } ;
 }
 
+#pragma mark - HandleView (AngleView)
+@implementation HandleView (AngleView)
+
 static const char * kPointIndexKey = "kPointIndexKey" ;
 
-@implementation HandleView (AngleView)
 -(void)setPointIndex:(NSUInteger)pointIndex
 {
 	objc_setAssociatedObject( self, kPointIndexKey, @(pointIndex), OBJC_ASSOCIATION_RETAIN_NONATOMIC ) ;
@@ -37,12 +39,15 @@ static const char * kPointIndexKey = "kPointIndexKey" ;
 
 @end
 
+#pragma mark - AngleView ()
 @interface AngleView ()
 @property ( nonatomic, readonly ) NSArray * handleViews ;
 @property ( nonatomic, readonly ) CAShapeLayer * selectionShapeLayer ;
 @property ( nonatomic, readonly ) CGPathRef hitTestPath ;
 @property ( nonatomic, readonly ) CGPathRef anglePath ;
 @end
+
+#pragma mark - AngleView
 
 @implementation AngleView
 @synthesize shapeLayer = _shapeLayer ;

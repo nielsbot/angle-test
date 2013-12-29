@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "AngleVIew.h"
-#import "View.h"
 #import "HandleView.h"
 
 #pragma mark - HandleView (ViewController)
@@ -30,6 +29,7 @@
 
 @end
 
+#pragma mark - ViewController ()
 @interface ViewController ()
 {
 	struct AnglePoints _tapPoints ;
